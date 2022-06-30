@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="d1"></div>
   </div>
 </template>
 
@@ -16,3 +15,11 @@ export default {
   }
 }
 </script>
+
+<style  lang='less' scoped>
+#d1{
+  width: 3.75rem;
+  height: 3.75rem;
+  background: skyblue;
+}
+</style>
