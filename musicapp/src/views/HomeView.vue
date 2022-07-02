@@ -1,19 +1,20 @@
 <template>
   <div class="home">
-    <top-nav></top-nav>
+    <top-Nav></top-Nav>
     
   </div>
 </template>
 
 
-<script src="../assets/icon/iconfont.css">
+<script>
+
 // @ is an alias to /src
-import topNav from '@/components/topNav'
+import TopNav from '../components/topNav.vue'
 
 export default {
   name: 'home',
   components: {
-    topNav
+    TopNav
   }
 }
 </script>
