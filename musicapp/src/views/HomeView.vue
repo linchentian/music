@@ -1,25 +1,23 @@
 <template>
   <div class="home">
-    <div id="d1"></div>
+    <top-nav></top-nav>
+    
   </div>
 </template>
 
-<script>
+
+<script src="../assets/icon/iconfont.css">
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import topNav from '@/components/topNav'
 
 export default {
-  name: 'HomeView',
+  name: 'home',
   components: {
-    HelloWorld
+    topNav
   }
 }
 </script>
 
 <style  lang='less' scoped>
-#d1{
-  width: 3.75rem;
-  height: 3.75rem;
-  background: skyblue;
-}
+
 </style>
