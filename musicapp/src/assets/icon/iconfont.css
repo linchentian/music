@@ -1,20 +1,71 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3487649 */
-  src: url('iconfont.woff2?t=1656338544199') format('woff2'),
-       url('iconfont.woff?t=1656338544199') format('woff'),
-       url('iconfont.ttf?t=1656338544199') format('truetype');
+  src: url('iconfont.woff2?t=1656990455158') format('woff2'),
+       url('iconfont.woff?t=1656990455158') format('woff'),
+       url('iconfont.ttf?t=1656990455158') format('truetype');
 }
 
 .iconfont {
   font-family: "iconfont" !important;
-  font-size: 32px;
+  font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-zuojiantou:before {
+  content: "\e625";
+}
+
+.icon-gengduo-shuxiang:before {
+  content: "\e8c4";
+}
+
+.icon-xuanze-duoxuan-tianchong:before {
+  content: "\e65f";
+}
+
+.icon-duoxuankuang:before {
+  content: "\e624";
+}
+
+.icon-show_duoxuan:before {
+  content: "\e626";
+}
+
+.icon-yinfu:before {
+  content: "\e630";
+}
+
+.icon-gengduo:before {
+  content: "\e623";
+}
+
+.icon-yinle:before {
+  content: "\e66e";
+}
+
+.icon-right-s:before {
+  content: "\e627";
+}
+
+.icon-xiangyousanjiaoxing:before {
+  content: "\e70f";
+}
+
+.icon-music:before {
+  content: "\e69f";
+}
+
+.icon-wodeguanzhu:before {
+  content: "\e8bc";
+}
+
+.icon-wuxiandianbo-copy:before {
+  content: "\e652";
+}
+
 .icon-sousuo:before {
-  font-size: 0.3rem;
   content: "\e651";
 }
 
@@ -22,7 +73,7 @@
   content: "\e632";
 }
 
-.icon-paihangbang:before {
+.icon-paixingbang:before {
   content: "\e6c5";
 }
 
