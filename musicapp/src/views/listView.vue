@@ -13,7 +13,7 @@ import { useRoute } from 'vue-router'
 export default{
     setup(){
         const route = useRoute()
-        console.log(route)
+        // console.log(route)
         let state = reactive({
             list:[],
             playlist:{}
@@ -22,7 +22,7 @@ export default{
             let id = route.query.id;
             let res = await getPlaylistDetai(id);
             state.playlist = res.data.playlist
-            console.log(res)
+            // console.log(res)
         })
         return {
             state

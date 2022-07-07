@@ -17,6 +17,7 @@ import "swiper/css/swiper.css"
 import Swiper from 'swiper';  
 import {getBanner} from '@/api/index.js'
 
+
 export default{
     data:function(){
         return{
@@ -38,11 +39,11 @@ export default{
                 el: '.swiper-pagination',
             }
         });
-
         let res = await getBanner(1);
         this.imgs = res.data.banners
     }
 }
+
 </script>
 <style lang="less">
 #swipercom{

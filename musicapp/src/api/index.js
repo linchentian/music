@@ -4,7 +4,7 @@ let baseUrl = 'http://localhost:3000'
 // 获取轮播图api
 // 1：android 2：iphone 3： ipad
 export function getBanner(type=1){
-    return axios.get(`/banner?type=${type}`);
+    return axios.get(`${baseUrl}/banner?type=${type}`);
 }
 
 export function getMusicList(limit=10){
