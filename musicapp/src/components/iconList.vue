@@ -123,13 +123,13 @@ export default{
     display: flex;
     padding: 0.4rem;
     .swiper-slide{
-        width: 20%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         .icon{
-            width: 0.5rem;
-            height: 0.5rem;
+            width: 1rem;
+            height: 1rem;
         }
         span{
             font-size: 0.26rem;

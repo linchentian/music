@@ -2,9 +2,9 @@
     <div class="musicList">
         <div class="musicList-top">
             <div class="title">发现好歌单</div>
-            <div class="more" @click="sendMessage">查看更多</div>
+            <div class="more">查看更多</div>
         </div>
-        <div class="mlist" >
+        <div class="mlist">
             <div class="swiper-container" id="musicSwiper">
                 <div class="swiper-wrapper">
                     <router-link :to="{path: '/listview',query:{id: item.id}}" class="swiper-slide" v-for="(item, i) in state.musicList" :key="i">
@@ -29,8 +29,8 @@ import Swiper from 'swiper';
 import {getMusicList} from '@/api/index.js'
 import { reactive, onMounted, onUpdated } from "vue";
 
+
 var mySwiper;
-var index;
 export default{
     setup(){
         let state = reactive({musicList:[]})
@@ -49,22 +49,21 @@ export default{
         onMounted(async ()=>{
             let res = await getMusicList()
             state.musicList = res.data.result
-            // console.log(state.musicList)
         })
         onUpdated(()=>{
             mySwiper = new Swiper('#musicSwiper',{
                 slidesPerView: 3,
                 spaceBetween: 10,
             });
-            index = mySwiper.activeIndex
+            
         })
         return {
             state, changeValue
         }
     },
     methods:{
-        sendMessage:function(){
-            this.$emit('sendParentMsg', mySwiper.activeIndex)
+        addEvent:function(){
+            alert(mySwiper.activeIndex)
         }
     }
 }

@@ -1,13 +1,12 @@
 <template>
   <div class="home">
-    <div class="img_bg">
-      <div class="content">
-        <top-Nav></top-Nav>
-        <swiperCom></swiperCom>
-        <iconList></iconList>
-      </div>
+    <div class="bg">
+      <img :src="backgroundImg">
+      <top-Nav></top-Nav> 
+      <swiperCom  @sendMsg="changeBg"></swiperCom>
+      <iconList></iconList>
+      <musicList></musicList>
     </div>
-    <musicList @sendParentMsg="getChildMsg"></musicList>
   </div>
 </template>
 
@@ -24,6 +23,7 @@ import musicList from '@/components/musicList.vue'
 export default {
   data(){
     return {
+      backgroundImg: "",
       musicIndex: 0,
     }
   },
@@ -35,9 +35,9 @@ export default {
     musicList
   },
   methods:{
-    getChildMsg(value){
-      this.musicIndex=value
-      console.log(this.musicIndex)
+    changeBg(value){
+      this.backgroundImg=value.pic
+      // console.log(this.backgroundImg)
     }
   },
   watch:{
@@ -49,8 +49,14 @@ export default {
 </script>
 
 <style  lang='less' scoped>
-.img_bg{
-  background:url("../assets/pic/1.jpg");
+.bg{
+  img{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    filter: blur(800px);
+  }
 }
 .img_bg:after{
   background: inherit;

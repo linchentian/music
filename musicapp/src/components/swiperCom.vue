@@ -21,14 +21,20 @@ import {getBanner} from '@/api/index.js'
 export default{
     data:function(){
         return{
+            img: {},
             imgs:[
-                {pic: require('../assets/pic/1.jpg')},
-                {pic: require('../assets/pic/1.jpg')},
-                {pic: require('../assets/pic/1.jpg')}
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
             ]
         }
     },
     async mounted(){
+        var that = this
         var mySwiper = new Swiper('#swiperIndex', {
             // direction: 'vertical', // 垂直切换选项
             loop: true, // 循环模式选项
@@ -37,10 +43,17 @@ export default{
             // 如果需要分页器
             pagination: {
                 el: '.swiper-pagination',
+            },
+            on:{
+                slideChange:function(){
+                    // console.log(that.imgs[this.realIndex]);
+                    that.$emit('sendMsg', that.imgs[this.realIndex])
+                }
             }
         });
         let res = await getBanner(1);
         this.imgs = res.data.banners
+        that.$emit('sendMsg', that.imgs[0])
     }
 }
 
