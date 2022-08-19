@@ -4,7 +4,7 @@
         <div class="listViewTopNav">
             <div class="back" @click="$router.go(-1)">
                 <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-zuojiantou"></use>
+                        <use xlink:href="#icon-fanhui"></use>
                 </svg>
                 <div class="title">
                     <span>歌单</span>
@@ -15,7 +15,7 @@
                         <use xlink:href="#icon-sousuo"></use>
                 </svg>
                 <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-gengduo-shuxiang"></use>
+                        <use xlink:href="#icon-fenxiang"></use>
                 </svg>
             </div>
         </div>
@@ -24,7 +24,7 @@
                 <img :src="playlist.coverImgUrl">
                 <div class="count">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-xiangyousanjiaoxing"></use>
+                        <use xlink:href="#icon-bofang"></use>
                     </svg>
                     <span>{{changeValue(playlist.playCount)}}</span>
                 </div>
@@ -43,25 +43,25 @@
         <div class="iconList">
             <div class="iconItem">
                 <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-duoxuankuang"></use>
+                    <use xlink:href="#icon-dianzan"></use>
                 </svg>
                 <span>{{playlist.commentCount }}</span> 
             </div>
             <div class="iconItem">
                 <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-fenxiangxiao"></use>
+                    <use xlink:href="#icon-pinglun"></use>
                 </svg>
                 <span>{{playlist.shareCount }}</span> 
             </div>
             <div class="iconItem">
                 <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-gouwuche"></use>
+                    <use xlink:href="#icon-xiazai"></use>
                 </svg>
                 <span>下载</span> 
             </div>
             <div class="iconItem">
                 <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-xuanze-duoxuan-tianchong"></use>
+                    <use xlink:href="#icon-gengduo"></use>
                 </svg>
                 <span>多选</span> 
             </div>

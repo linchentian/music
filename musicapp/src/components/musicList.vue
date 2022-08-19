@@ -12,7 +12,7 @@
                         <span class="name">{{item.name}}</span>
                         <div class="count">
                             <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-xiangyousanjiaoxing"></use>
+                                <use xlink:href="#icon-bofang"></use>
                             </svg>
                             <span>{{changeValue(item.playCount)}}</span>
                         </div>
@@ -55,7 +55,6 @@ export default{
                 slidesPerView: 3,
                 spaceBetween: 10,
             });
-            
         })
         return {
             state, changeValue

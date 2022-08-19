@@ -3,7 +3,7 @@
         <div class="playlist-top">
             <div class="left">
                 <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-xiangyousanjiaoxing"></use>
+                    <use xlink:href="#icon-bofang"></use>
                 </svg>
                 <div class="'text'">
                     <div>播放全部(共{{playlist.tracks.length}}首)</div>
@@ -27,10 +27,10 @@
                     </div>
                     <div class="right">
                         <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-huatong"></use>
+                            <use xlink:href="#icon-bofang"></use>
                         </svg>
                         <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-gengduo-shuxiang"></use>
+                            <use xlink:href="#icon-huatong"></use>
                         </svg>
                     </div>
             </div>

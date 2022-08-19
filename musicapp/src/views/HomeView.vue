@@ -6,6 +6,7 @@
       <swiperCom  @sendMsg="changeBg"></swiperCom>
       <iconList></iconList>
       <musicList></musicList>
+      <songList></songList>
     </div>
   </div>
 </template>
@@ -18,6 +19,7 @@ import TopNav from '../components/topNav.vue'
 import swiperCom from '../components/swiperCom.vue'
 import iconList from '@/components/iconList.vue'
 import musicList from '@/components/musicList.vue'
+import SongList from '@/components/songList.vue'
 
 
 export default {
@@ -32,8 +34,9 @@ export default {
     TopNav,
     swiperCom,
     iconList,
-    musicList
-  },
+    musicList,
+    SongList
+},
   methods:{
     changeBg(value){
       this.backgroundImg=value.pic
@@ -61,8 +64,5 @@ export default {
 .img_bg:after{
   background: inherit;
   filter: blur(100px);
-}
-.content{
-
 }
 </style>

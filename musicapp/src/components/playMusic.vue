@@ -4,7 +4,7 @@
         <div class="playTop">
             <div class="back" @click="$emit('back')">
                 <svg class="icon" aria-hidden="true">
-                    <use  xlink:href="#icon-zuojiantou"></use>
+                    <use  xlink:href="#icon-fanhui"></use>
                 </svg>
             </div>
             <div class="center">
@@ -14,7 +14,7 @@
             </div>
             <div class="sharr">
                 <svg class="icon" aria-hidden="true">
-                    <use  xlink:href="#icon-fenxiangxiao"></use>
+                    <use  xlink:href="#icon-fenxiang"></use>
                 </svg>
             </div>
         </div>
@@ -23,7 +23,7 @@
             <img class="circle" :class="{active: !paused}" src="@/assets/pic/circle.png">
             <img class="playImg" :class="{active: !paused}" :src="playDetail.al.picUrl">
         </div>
-        <div class="playLyric" v-show="isLyric" ref="playLyric">
+        <div class="playLyric" v-show="isLyric" @click="isLyric = !isLyric" ref="playLyric">
             <p :class="{active:(currentTime*1000 >= parseInt(item.pre))&&(currentTime*1000 <= parseInt(item.time))}" v-for="(item, i) in $store.getters.lyricList" :key="i">
                 {{item.lyric}}
             </p>
@@ -33,22 +33,22 @@
         </div>
         <div class="playFoot">    
             <svg class="icon" aria-hidden="true">
-                <use  xlink:href="#icon-zuojiantou"></use>
+                <use  xlink:href="#icon-24gl-repeat2"></use>
             </svg>
             <svg class="icon" aria-hidden="true" @click="goPlay(-1)">
-                <use  xlink:href="#icon-hanhan-01-01"></use>
+                <use  xlink:href="#icon-shangyishou"></use>
             </svg>
             <svg v-if="paused" class="play" aria-hidden="true" @click="play">
-                <use  xlink:href="#icon-24gl-playCircle"></use>
+                <use  xlink:href="#icon-bofang1"></use>
             </svg>
             <svg v-else class="play" aria-hidden="true" @click="play">
                 <use  xlink:href="#icon-zanting"></use>
             </svg>
             <svg class="icon" aria-hidden="true" @click="goPlay(1)">
-                <use  xlink:href="#icon-hanhan-01-011"></use>
+                <use  xlink:href="#icon-xiayishou"></use>
             </svg>
             <svg class="icon" aria-hidden="true">
-                <use  xlink:href="#icon-duoxuankuang"></use>
+                <use  xlink:href="#icon-gengduo2"></use>
             </svg>
         </div>
     </div>
@@ -85,6 +85,7 @@ export default{
                 index = 0;
             }
             this.$store.commit('setPlayIndex', index)
+            this.$emit('changePaused')
         }
     },
     props:['playDetail','paused','play'],
@@ -201,7 +202,7 @@ export default{
         }
     }
     .playFoot{
-        width: 7.5rem;
+        width: 7rem;
         height: 1.5rem;
         position: absolute;
         left: 0;
@@ -210,10 +211,12 @@ export default{
         justify-content: space-between;
         align-items: center;
         padding: 0 0.4rem;
+        margin: 0.2rem;
         .icon{
             width: 0.4rem;
             height: 0.4rem;
             fill: #fff;
+            color: #fff;
         }
         .play{
             width: 1rem;

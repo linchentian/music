@@ -17,37 +17,37 @@
                     </div>
                     <div class="swiper-slide">
                         <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-diantai"></use>
+                            <use xlink:href="#icon-shouyinji"></use>
                         </svg>
                         <span>私人FM</span>
                     </div>
                     <div class="swiper-slide">
                         <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-gedan"></use>
+                            <use xlink:href="#icon-ziyuan20"></use>
                         </svg>
                         <span>每日歌单</span>
                     </div>
                     <div class="swiper-slide">
                         <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-paihangbang"></use>
+                            <use xlink:href="#icon-paixingbang"></use>
                         </svg>
                         <span>排行榜</span>
                     </div>
                     <div class="swiper-slide">
                         <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-shu"></use>
+                            <use xlink:href="#icon-tushu"></use>
                         </svg>
                         <span>有声书</span>
                     </div>
                     <div class="swiper-slide">
                         <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-music"></use>
+                            <use xlink:href="#icon-zhuanji"></use>
                         </svg>
                         <span>数字专辑</span>
                     </div>
                     <div class="swiper-slide">
                         <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-wodeguanzhu"></use>
+                            <use xlink:href="#icon-huatong"></use>
                         </svg>
                         <span>关注新歌</span>
                     </div>

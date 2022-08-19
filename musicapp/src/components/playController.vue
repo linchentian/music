@@ -9,16 +9,16 @@
         </div>
         <div class="right">
             <svg v-if="paused" class="icon" aria-hidden="true" @click="play">
-                <use  xlink:href="#icon-24gl-playCircle"></use>
+                <use  xlink:href="#icon-bofang"></use>
             </svg>
             <svg v-else class="icon" aria-hidden="true" @click="play">
                 <use  xlink:href="#icon-zanting"></use>
             </svg>
             <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-24gf-playlist"></use>
+                <use xlink:href="#icon-gengduo2"></use>
             </svg>
         </div>
-        <play-music @back="show=!show" v-show="show" :play="play" :paused="paused" :playDetail="playlist[playCurrentIndex]"></play-music>
+        <play-music @back="show=!show" v-show="show" :play="play" @changePaused="changePaused" :paused="paused" :playDetail="playlist[playCurrentIndex]"></play-music>
         <audio ref="audio" :src="`https://music.163.com/song/media/outer/url?id=${playlist[playCurrentIndex].id}.mp3`"></audio>
     </div>
 </template>
@@ -63,6 +63,10 @@ export default{
             this.$store.state.id = setInterval(() => {
                 this.$store.commit('setCurrentTime', this.$refs.audio.currentTime)
             }, 1000)
+        },
+        changePaused(){
+            console.log(this.paused)
+            this.paused = true;
         }
     }
 }
@@ -80,6 +84,7 @@ export default{
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #ccc;
+    z-index: 999;
     .left{
         display: flex;
         padding: 0 0.2rem;
